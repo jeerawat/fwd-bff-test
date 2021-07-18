@@ -1,7 +1,5 @@
-<p align="center">
-    FWD TEST
-</p>
 
+# FWD TEST
 # TypeScript Microservice or Backend for Frontend with Node.js
 
 This Starter Kit Template can be the foundation of a TypeScript Node.js Microservice or Backend for Frontend.
