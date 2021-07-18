@@ -42,7 +42,7 @@ Once the Node toolchain has been installed, you can download the project depende
 ```bash
 npm install  -> install node package 
 npm run build -> build 
-npm run start -> http://localhost:3001
+npm run start -> <a href="http://localhost:3001" target="_blank">http://localhost:3001</a>
 
 npm run test  -> run test
 ```
