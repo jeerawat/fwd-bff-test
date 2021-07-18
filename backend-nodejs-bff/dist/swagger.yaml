@@ -1,0 +1,243 @@
+basePath: ""
+definitions:
+    QuatationParam:
+        description: ""
+        properties:
+            gender:
+                enum:
+                    - MALE
+                    - FEMA​LE
+                type: string
+                description: ""
+            dob:
+                type: string
+                description: ""
+            planCode:
+                enum:
+                    - T11A20
+                    - T11A50
+                    - T11AM1
+                type: string
+                description: ""
+            premiumPerYear:
+                type: number
+                format: double
+                description: ""
+            paymentFrequency:
+                enum:
+                    - YEARLY
+                    - HALFYEARLY
+                    - 'QUARTERLY '
+                    - MONTHLY
+                type: string
+                description: ""
+            saPerYear:
+                type: number
+                format: double
+                description: ""
+        type: object
+        required:
+            - gender
+            - dob
+            - planCode
+            - premiumPerYear
+            - paymentFrequency
+            - saPerYear
+    CustomerByPackage:
+        description: ""
+        properties:
+            gender:
+                enum:
+                    - MALE
+                    - FEMA​LE
+                type: string
+                description: ""
+            dob:
+                type: string
+                description: ""
+            planCode:
+                enum:
+                    - T11A20
+                    - T11A50
+                    - T11AM1
+                type: string
+                description: ""
+            premiumPerYear:
+                type: number
+                format: double
+                description: ""
+            paymentFrequency:
+                enum:
+                    - YEARLY
+                    - HALFYEARLY
+                    - 'QUARTERLY '
+                    - MONTHLY
+                type: string
+                description: ""
+            saPerYear:
+                type: number
+                format: double
+                description: ""
+            productId:
+                type: string
+                description: ""
+            productType:
+                type: string
+                description: ""
+            productFamily:
+                type: string
+                description: ""
+            baseSumAssured:
+                type: number
+                format: double
+                description: ""
+            baseAnnualPremium:
+                type: number
+                format: double
+                description: ""
+            productTerm:
+                type: number
+                format: double
+                description: ""
+            premiumPayingTerm:
+                type: number
+                format: double
+                description: ""
+            title:
+                enum:
+                    - นาย
+                    - นาง
+                    - นางสาว
+                type: string
+                description: ""
+            customerFristName:
+                type: string
+                description: ""
+            customerLastname:
+                type: string
+                description: ""
+            customerEmail:
+                type: string
+                description: ""
+            customerPhoneNumber:
+                type: string
+                description: ""
+        type: object
+        required:
+            - gender
+            - dob
+            - planCode
+            - premiumPerYear
+            - paymentFrequency
+            - saPerYear
+            - productId
+            - productType
+            - productFamily
+            - baseSumAssured
+            - baseAnnualPremium
+            - productTerm
+            - premiumPayingTerm
+            - title
+            - customerFristName
+            - customerLastname
+            - customerEmail
+            - customerPhoneNumber
+info:
+    description: 'Code pattern for starting a typescript-based microservice'
+    license:
+        name: ISC
+    title: fwd-insurance-node-typescript
+    version: 1.0.0
+paths:
+    /hello:
+        get:
+            operationId: HelloWorldSayHelloToUnknownUser
+            produces:
+                - text/html
+            responses:
+                '200':
+                    description: Ok
+                    schema:
+                        type: string
+            description: ""
+            parameters: []
+    '/hello/{name}':
+        get:
+            operationId: HelloWorldSayHello
+            produces:
+                - text/html
+            responses:
+                '200':
+                    description: Ok
+                    schema:
+                        type: string
+            description: ""
+            parameters:
+                -
+                    description: ""
+                    in: path
+                    name: name
+                    required: true
+                    type: string
+    /product/getProduct:
+        post:
+            operationId: ProductGetProduct
+            produces:
+                - application/json
+            responses:
+                '200':
+                    description: Ok
+                    schema:
+                        type: object
+            description: ""
+            consumes:
+                - application/json
+            parameters:
+                -
+                    description: ""
+                    in: body
+                    name: data
+                    required: true
+                    schema:
+                        $ref: '#/definitions/QuatationParam'
+    /product/setCustomerByPackage:
+        post:
+            operationId: ProductSetCustomerByPackage
+            produces:
+                - application/json
+            responses:
+                '200':
+                    description: Ok
+                    schema:
+                        type: object
+            description: ""
+            consumes:
+                - application/json
+            parameters:
+                -
+                    description: ""
+                    in: body
+                    name: data
+                    required: true
+                    schema:
+                        $ref: '#/definitions/CustomerByPackage'
+    /health:
+        get:
+            operationId: HealthHealthCheck
+            produces:
+                - application/json
+            responses:
+                '200':
+                    description: Ok
+                    schema:
+                        type: object
+                        properties:
+                            status:
+                                type: string
+                                description: ""
+            description: ""
+            parameters: []
+swagger: '2.0'
+securityDefinitions: {}
+produces:
+    - application/json
