@@ -43,6 +43,7 @@ Once the Node toolchain has been installed, you can download the project depende
 npm install
 npm run build
 npm run start
+npm run test 
 ```
 
 ### Deploying 

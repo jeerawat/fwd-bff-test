@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testExecutions version="1">
+  <file path="/Users/js/JOB/FWD/APP/insurance-quote/backend-nodejs-bff/test/simple-worker.config.spec.ts">
+    <testCase name="simple-worker.config canary verifies test infrastructure" duration="2"/>
+    <testCase name="simple-worker.config given SimpleWorkerConfig default runInterval should be 60,000 microseconds" duration="0"/>
+  </file>
+  <file path="/Users/js/JOB/FWD/APP/insurance-quote/backend-nodejs-bff/test/util/opentracing/express-middleware.spec.ts">
+    <testCase name="express-middelware canary verifies test infrastructure" duration="4"/>
+    <testCase name="express-middelware given buildTraceContext() when context is undefined then return empty object" duration="9"/>
+    <testCase name="express-middelware given buildTraceContext() when context does not contain uber-trace-id then return context" duration="0"/>
+    <testCase name="express-middelware given buildTraceContext() when context contains uber-trace-id then return {traceId, spanId, parentSpanId, flags}" duration="1"/>
+  </file>
+  <file path="/Users/js/JOB/FWD/APP/insurance-quote/backend-nodejs-bff/test/util/string-util.spec.ts">
+    <testCase name="string-util canary verifies test infrastructure" duration="3"/>
+    <testCase name="string-util given parseCsvString() when value and default value not provided should return empty array" duration="1"/>
+    <testCase name="string-util given parseCsvString() when value is not provided and defaultValue is provided should return [defaultValue]" duration="0"/>
+    <testCase name="string-util given parseCsvString() when value does not contain a comma should return [value]" duration="1"/>
+    <testCase name="string-util given parseCsvString() when value does not contain a comma and when value contains leading and trailing spaces should trim the value" duration="0"/>
+    <testCase name="string-util given parseCsvString() when value contains a comma should return a list of values split along commas" duration="1"/>
+    <testCase name="string-util given parseCsvString() when value contains a comma and when value contains leading and trailing spaces should trim the value" duration="0"/>
+  </file>
+  <file path="/Users/js/JOB/FWD/APP/insurance-quote/backend-nodejs-bff/test/workers/worker-manager.spec.ts">
+    <testCase name="worker-manager canary verifies test infrastructure" duration="3"/>
+    <testCase name="worker-manager given WorkerManagerImpl given registerWorker() when called with defined worker then increase worker count" duration="1"/>
+    <testCase name="worker-manager given WorkerManagerImpl given registerWorker() when worker is undefined then do not increment worker count" duration="0"/>
+    <testCase name="worker-manager given WorkerManagerImpl given start() when called then call WorkerApi start" duration="7"/>
+    <testCase name="worker-manager given WorkerManagerImpl given stop() when called then call WorkerApi stop" duration="1"/>
+  </file>
+  <file path="/Users/js/JOB/FWD/APP/insurance-quote/backend-nodejs-bff/test/logger/logger.api.spec.ts">
+    <testCase name="logger.api canary verifies test infrastructure" duration="10"/>
+    <testCase name="logger.api given LoggerApi.time() when called then pass time data to info" duration="508"/>
+  </file>
+  <file path="/Users/js/JOB/FWD/APP/insurance-quote/backend-nodejs-bff/test/workers/simple.worker.spec.ts">
+    <testCase name="simple.worker canary verifies test infrastructure" duration="2"/>
+    <testCase name="simple.worker given SimpleWorker when started then run until stopped" duration="605"/>
+    <testCase name="simple.worker given SimpleWorker when started and when start() called again then should return same observable" duration="1"/>
+  </file>
+  <file path="/Users/js/JOB/FWD/APP/insurance-quote/backend-nodejs-bff/test/server.spec.ts">
+    <testCase name="server canary verifies test infrastructure" duration="2"/>
+    <testCase name="server given ApiServer given constructor when apiContext provided then pass apiContext to use()" duration="491"/>
+    <testCase name="server given ApiServer given start() when address is &quot;::&quot; then display localhost" duration="15"/>
+    <testCase name="server given ApiServer given stop() when called if server is not started then return immediately" duration="5"/>
+    <testCase name="server given ApiServer given stop() when called after server is started then close the server" duration="5"/>
+  </file>
+  <file path="/Users/js/JOB/FWD/APP/insurance-quote/backend-nodejs-bff/test/services/product.service.spec.ts">
+    <testCase name="Hello World service canary test verifies test infrastructure" duration="2"/>
+    <testCase name="Hello World service Given greeting() when &quot;Juan&quot; provided then return &quot;Hello, Juan!&quot;" duration="1"/>
+    <testCase name="Hello World service Given greeting() when no name provided then return &quot;Hello, World!&quot;" duration="0"/>
+  </file>
+  <file path="/Users/js/JOB/FWD/APP/insurance-quote/backend-nodejs-bff/test/services/hello-world.service.spec.ts">
+    <testCase name="Hello World service canary test verifies test infrastructure" duration="2"/>
+    <testCase name="Hello World service Given greeting() when &quot;Juan&quot; provided then return &quot;Hello, Juan!&quot;" duration="3"/>
+    <testCase name="Hello World service Given greeting() when no name provided then return &quot;Hello, World!&quot;" duration="0"/>
+  </file>
+  <file path="/Users/js/JOB/FWD/APP/insurance-quote/backend-nodejs-bff/test/controllers/hello-world.controller.spec.ts">
+    <testCase name="hello-world.controller canary validates test infrastructure" duration="312"/>
+    <testCase name="hello-world.controller Given /hello should return &quot;Hello, World!&quot;" duration="33"/>
+    <testCase name="hello-world.controller Given /hello/Johnny should return &quot;Hello, Johnny!&quot;" duration="8"/>
+  </file>
+  <file path="/Users/js/JOB/FWD/APP/insurance-quote/backend-nodejs-bff/test/controllers/health.controller.spec.ts">
+    <testCase name="health.controller canary validates test infrastructure" duration="482"/>
+    <testCase name="health.controller Given /health should return 200 status" duration="33"/>
+    <testCase name="health.controller Given /health should return {status: &quot;UP:}" duration="8"/>
+  </file>
+</testExecutions>
